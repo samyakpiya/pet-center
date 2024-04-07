@@ -5,16 +5,7 @@ import PetList from "@/components/pet-list";
 import Search from "@/components/search";
 import Stats from "@/components/stats";
 
-const FETCH_URL1 = `https://bytegrad.com/course-assets/projects/petsoft/api/pets`;
-
 async function Page() {
-  const response = await fetch(FETCH_URL1);
-  if (!response.ok) {
-    throw new Error("Could not fetch pets.");
-  }
-
-  const data = await response.json();
-
   return (
     <main>
       <div className="flex justify-between items-center text-white py-8">
@@ -29,7 +20,7 @@ async function Page() {
 
         <div className="md:row-start-2 md:row-span-full md:col-start-1 md:col-span-1">
           <ContentBlock>
-            <PetList pets={data} />
+            <PetList />
           </ContentBlock>
         </div>
 
