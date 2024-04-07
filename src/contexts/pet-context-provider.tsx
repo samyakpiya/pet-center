@@ -1,7 +1,7 @@
 "use client";
 
 import { Pet } from "@/lib/types";
-import { createContext, Dispatch, SetStateAction, useState } from "react";
+import { createContext, useState } from "react";
 
 type PetContextProviderProps = {
   data: Pet[];
