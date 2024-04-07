@@ -26,7 +26,7 @@ function PetDetails() {
 
 function EmptyView() {
   return (
-    <p className="h-full justify-center items-center text-2xl font-medium">
+    <p className="flex h-full justify-center items-center text-2xl font-medium">
       No pet selected
     </p>
   );
