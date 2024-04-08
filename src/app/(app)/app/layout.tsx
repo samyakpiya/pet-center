@@ -5,8 +5,6 @@ import PetContextProvider from "@/contexts/pet-context-provider";
 import SearchContextProvider from "@/contexts/search-context-provider";
 import prisma from "@/lib/db";
 
-const FETCH_URL1 = `https://bytegrad.com/course-assets/projects/petsoft/api/pets`;
-
 async function Layout({ children }: { children: React.ReactNode }) {
   const pets = await prisma.pet.findMany();
 
