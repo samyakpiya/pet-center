@@ -21,3 +21,10 @@ With Pet Center, you can easily manage bookings, keep track of pet information, 
 ## Built With Next.js
 
 Pet Center leverages the power of Next.js, a leading React framework, to ensure a fast, scalable, and reliable web application experience. Our choice of Next.js underlines our commitment to using cutting-edge technology to benefit our users.
+
+### Cutting Edge
+
+- useFormStatus() for easy loading state with server actions (in forms)
+- useTransition() for Server Actions (Loading State): To get a loading state with server actions outside forms, use useTransition()
+- useOptimistic() for Optimistic UI
+- flushSync() to force updates synchronously. The normal behavior is that React batches state updates together.
