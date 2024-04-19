@@ -28,3 +28,4 @@ Pet Center leverages the power of Next.js, a leading React framework, to ensure 
 - useTransition() for Server Actions (Loading State): To get a loading state with server actions outside forms, use useTransition()
 - useOptimistic() for Optimistic UI
 - flushSync() to force updates synchronously. The normal behavior is that React batches state updates together.
+- react-hook-form for performant, flexible and extensible forms
