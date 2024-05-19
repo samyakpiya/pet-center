@@ -11,12 +11,11 @@ export default function Home() {
         <section className="flex flex-col justify-between">
           <Logo className="h-10 w-auto" />
           <h1 className="text-5xl font-semibold my-6 max-w-[500px]">
-            Pet Center - Pet Daycare Management Software
+            Manage your <span className="font-bold">pet daycare</span> with ease
           </h1>
           <p className="text-2xl font-medium max-w-[600px]">
-            A flexible system to meet the needs of your pet daycare. Pet Center
-            is a set of software tools to help keep track of pets under your
-            care.
+            Use Pet Center to easily keep track of pets under your care. Get
+            lifetime access for just $49.
           </p>
           <div className="mt-6 space-x-3">
             <Button size="lg" asChild>
