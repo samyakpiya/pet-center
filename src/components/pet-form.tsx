@@ -1,14 +1,15 @@
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { usePetContext } from "@/lib/hooks";
-import PetFormBtn from "@/components/pet-form-btn";
+import { TPetForm, petFormSchema } from "@/lib/validations";
 
-import { useForm } from "react-hook-form";
+import PetFormBtn from "@/components/pet-form-btn";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+
+import { DEFAULT_PET_IMAGE } from "@/lib/constants";
+import { usePetContext } from "@/lib/hooks";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { petFormSchema, TPetForm } from "@/lib/validations";
-import { DEFAULT_PET_IMAGE } from "@/lib/constants";
+import { useForm } from "react-hook-form";
 
 type PetFormProps = {
   actionType: "add" | "edit";
@@ -28,13 +29,16 @@ export default function PetForm({
     formState: { errors },
   } = useForm<TPetForm>({
     resolver: zodResolver(petFormSchema),
-    defaultValues: actionType === "edit" ? {
-      name: selectedPet?.name,
-      ownerName: selectedPet?.ownerName,
-      imageUrl: selectedPet?.imageUrl,
-      age: selectedPet?.age,
-      notes: selectedPet?.notes,
-    } : undefined,
+    defaultValues:
+      actionType === "edit"
+        ? {
+            name: selectedPet?.name,
+            ownerName: selectedPet?.ownerName,
+            imageUrl: selectedPet?.imageUrl,
+            age: selectedPet?.age,
+            notes: selectedPet?.notes,
+          }
+        : undefined,
   });
 
   return (
