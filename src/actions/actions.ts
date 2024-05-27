@@ -93,6 +93,8 @@ export async function signUp(prevState: unknown, formData: unknown) {
 }
 
 export async function logOut() {
+  sleep(1000);
+
   await signOut({
     redirectTo: "/",
   });
