@@ -2,15 +2,25 @@
 
 import { signIn, signOut } from "@/lib/auth";
 import prisma from "@/lib/db";
+import { checkAuth, getPetById } from "@/lib/server-utils";
 import { sleep } from "@/lib/utils";
 import { petFormSchema, petIdSchema } from "@/lib/validations";
-import { revalidatePath } from "next/cache";
+
 import bcrypt from "bcryptjs";
-import { checkAuth, getPetById } from "@/lib/server-utils";
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 // User Actions
-export async function logIn(formData: FormData) {
+export async function logIn(formData: unknown) {
+  if (!(formData instanceof FormData)) {
+    return {
+      message: "Invalid form data.",
+    };
+  }
+
   await signIn("credentials", formData);
+
+  redirect("/app/dashboard");
 }
 
 export async function signUp(formData: FormData) {
