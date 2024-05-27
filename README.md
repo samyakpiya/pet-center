@@ -29,3 +29,4 @@ Pet Center leverages the power of Next.js, a leading React framework, to ensure 
 - useOptimistic() for Optimistic UI
 - flushSync() to force updates synchronously. The normal behavior is that React batches state updates together.
 - react-hook-form for performant, flexible and extensible forms
+- useFormState() gives the error state to forms without losing progressive enhancements.
