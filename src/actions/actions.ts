@@ -40,12 +40,8 @@ export async function logIn(prevState: unknown, formData: unknown) {
       }
     }
 
-    return {
-      message: "Could not sign in.",
-    };
+    throw error; // nextjs redirect throws error, so we need to rethrow it
   }
-
-  redirect("/app/dashboard");
 }
 
 export async function signUp(prevState: unknown, formData: unknown) {
