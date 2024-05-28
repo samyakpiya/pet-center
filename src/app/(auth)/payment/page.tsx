@@ -22,7 +22,13 @@ export default function Page({ searchParams }) {
 
       {searchParams.success && (
         <p className="text-sm text-green-600">
-          Payment successful! You now have lifetime access to PetCenter.
+          Payment successful! You now have lifetime access to Pet Center.
+        </p>
+      )}
+
+      {searchParams.canceled && (
+        <p className="text-sm text-red-600">
+          Payment cancelled. You can try again.
         </p>
       )}
     </main>
