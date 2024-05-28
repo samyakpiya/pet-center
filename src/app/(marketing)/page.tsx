@@ -3,6 +3,7 @@ import dashboard from "../../../public/dashboard.png";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { PET_CENTER_LIFETIME_ACCESS_PRICE } from "@/lib/constants";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
           </h1>
           <p className="text-2xl font-medium max-w-[600px]">
             Use Pet Center to easily keep track of pets under your care. Get
-            lifetime access for just $49.
+            lifetime access for just {PET_CENTER_LIFETIME_ACCESS_PRICE}.
           </p>
           <div className="mt-6 space-x-3">
             <Button size="lg" asChild>
