@@ -6,7 +6,11 @@ import { Button } from "@/components/ui/button";
 import { PET_CENTER_LIFETIME_ACCESS_PRICE } from "@/lib/constants";
 import { useTransition } from "react";
 
-export default function Page({ searchParams }) {
+export default function Page({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined };
+}) {
   const [isPending, startTransition] = useTransition();
 
   return (
