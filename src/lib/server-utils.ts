@@ -1,4 +1,4 @@
-import { auth } from "@/lib/auth";
+import { auth } from "@/lib/auth-no-edge";
 import { Pet, User } from "@prisma/client";
 import { redirect } from "next/navigation";
 import "server-only";
